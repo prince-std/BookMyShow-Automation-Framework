@@ -17,12 +17,6 @@ public class ExcelUtils {
     // Define the path to the Excel file. This path is relative to the project's root directory.
     private static final String TEST_DATA_FILE_PATH = "src/test/resources/testdata/DataSource.xlsx";
 
-    /**
-     * Reads all the data from a specific sheet in our Excel file.
-     *
-     * @param sheetName The name of the sheet to read from (e.g., "LoginData").
-     * @return A List of Object arrays, where each object array represents a row of test data.
-     */
     public static List<Object[]> getTestData(String sheetName) {
         // This List will hold all the rows of data we read from the Excel sheet.
         List<Object[]> testData = new ArrayList<>();

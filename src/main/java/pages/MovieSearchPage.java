@@ -6,9 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import utils.WaitUtils;
 
-/**
- * Page Object for the Movie Search functionality.
- */
 public class MovieSearchPage {
 
     private WebDriver driver;
@@ -40,11 +37,7 @@ public class MovieSearchPage {
         return movieTitle;
     }
 
-    /**
-     * Verifies the movie title on the details page.
-     * @param expectedTitle The expected title of the movie.
-     */
-    public void verifyMovieTitleOnDetailsPage(String expectedTitle) {
+     public void verifyMovieTitleOnDetailsPage(String expectedTitle) {
         WebElement titleElement = waitUtils.waitForElementToBeVisible(movieTitleOnDetailsPage);
         String actualTitle = titleElement.getText();
         Assert.assertEquals(actualTitle.trim(), expectedTitle.trim(), "The movie title on the details page does not match.");

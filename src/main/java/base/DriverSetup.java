@@ -6,22 +6,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.time.Duration;
 
-/**
- * DriverSetup class is responsible for initializing and quitting the WebDriver.
- * It supports multiple browsers and uses WebDriverManager to handle driver executables.
- */
+
 public class DriverSetup {
 
     private static WebDriver driver;
 
-    /**
-     * Initializes the WebDriver instance based on the specified browser.
-     * It sets up the driver, maximizes the window, and sets implicit waits.
-     *
-     * @param browserName The name of the browser to initialize (e.g., "chrome", "firefox").
-     * @return The configured WebDriver instance.
-     */
-    public static WebDriver initDriver(String browserName) {
+   public static WebDriver initDriver(String browserName) {
         if (browserName.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver=new ChromeDriver();
@@ -37,10 +27,7 @@ public class DriverSetup {
         return driver;
     }
 
-    /**
-     * Quits the WebDriver instance, closing all associated browser windows.
-     */
-    public static void quitDriver() {
+   public static void quitDriver() {
         if (driver != null) {
             driver.quit();
         }

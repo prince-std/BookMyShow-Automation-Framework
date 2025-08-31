@@ -8,14 +8,6 @@ import io.cucumber.java.Scenario;
 
 public class ScreenshotUtil {
 
-    /**
-     * This is the only method in this class. Its job is to check if a test scenario has failed.
-     * If it has, it will take a screenshot of the browser and attach it directly to the
-     * Cucumber HTML report.
-     *
-     * @param driver   The WebDriver instance (the browser).
-     * @param scenario The Cucumber scenario, which knows if it passed or failed.
-     */
     public static void takeScreenshotOnFailure(WebDriver driver, Scenario scenario) {
         
         // This 'if' statement checks the result of the test. The code inside will ONLY run if the scenario failed.

@@ -6,9 +6,7 @@ import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
 import pages.CitySearchPage;
 
-/**
- * Step definitions for the City Search feature.
- */
+
 public class CitySearchSteps {
 
     private WebDriver driver = Hooks.driver;

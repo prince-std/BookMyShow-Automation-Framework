@@ -7,19 +7,13 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import utils.WaitUtils;
 
-/**
- * Page Object for the Login Page/Flow.
- * Contains locators and methods for the login modal.
- */
 public class LoginPage {
 
     private WebDriver driver;
     private WaitUtils waitUtils;
 
-    // --- Locators for Home Page ---
+  
     private By signInButton = By.xpath("//div[text()='Sign in']");
-
-    // --- Locators for Login Modal ---
     private By mobileNumberInput = By.id("userMobileNumber");
     private By continueButton = By.xpath("//div[text()='Continue']");
     private By googleContinueButton = By.xpath("//div[text()='Continue with Google']");
@@ -30,10 +24,6 @@ public class LoginPage {
     private By closeLoginModalButton = By.xpath("//div[@class='sc-1ydq0aj-0 bIaakI']");
 
 
-    /**
-     * Constructor for LoginPage.
-     * @param driver The WebDriver instance.
-     */
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         this.waitUtils = new WaitUtils(driver);

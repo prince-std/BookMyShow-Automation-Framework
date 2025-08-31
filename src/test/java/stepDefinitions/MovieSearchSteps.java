@@ -7,8 +7,7 @@ import org.openqa.selenium.WebDriver;
 import pages.MovieSearchPage;
 
 public class MovieSearchSteps {
-
-    private WebDriver driver = Hooks.driver;
+	 private WebDriver driver = Hooks.driver;
     private MovieSearchPage movieSearchPage = new MovieSearchPage(driver);
     private String clickedMovieTitle; // To store the title of the movie we click
 

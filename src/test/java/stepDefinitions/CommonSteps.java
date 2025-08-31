@@ -4,9 +4,6 @@ import org.openqa.selenium.WebDriver;
 import hooks.Hooks;
 import io.cucumber.java.en.Given;
 
-/**
- * This class contains common step definitions that are shared across multiple feature files.
- */
 public class CommonSteps {
 
     private WebDriver driver = Hooks.driver;

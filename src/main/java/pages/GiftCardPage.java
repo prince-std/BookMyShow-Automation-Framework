@@ -6,9 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import utils.WaitUtils;
 
-/**
- * Page Object for the Gift Card functionality.
- */
 public class GiftCardPage {
 
     private WebDriver driver;

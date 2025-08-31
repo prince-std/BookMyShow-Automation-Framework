@@ -3,12 +3,8 @@ package runners;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-/**
- * TestNG Test Runner for executing Cucumber features.
- * It specifies the location of feature files, step definitions, and reporting options.
- */
 @CucumberOptions(
-   features = "features/login.feature", 
+   features = "features", 
     glue = {"stepDefinitions", "hooks"},
     plugin = {
         "pretty",

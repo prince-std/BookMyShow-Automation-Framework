@@ -11,9 +11,6 @@ import static org.testng.Assert.ARRAY_MISMATCH_TEMPLATE;
 
 import java.util.List;
 
-/**
- * Step definitions for the Login feature, now adapted for data-driven testing from Excel.
- */
 public class LoginSteps {
 
     private WebDriver driver = Hooks.driver;
@@ -29,8 +26,6 @@ public class LoginSteps {
             e.printStackTrace();
         }
     }
-
-    // --- Steps for Excel Data-Driven Test ---
 
     @When("I test the login functionality using the {string} sheet from Excel")
     public void i_test_the_login_functionality_using_the_sheet_from_excel(String sheetName) {
@@ -69,14 +64,8 @@ public class LoginSteps {
 
     @Then("all login test cases from the sheet should be verified")
     public void all_login_test_cases_from_the_sheet_should_be_verified() {
-        // This is a simple confirmation step. The actual tests (the Asserts) happen inside the @When step.
-        // If any of the assertions in the loop had failed, the test would have stopped there.
-        // If we reach this step, it means all rows from the Excel sheet have been tested successfully.
-        System.out.println("Successfully executed all " + testData.size() + " test cases from the Excel sheet.");
+       System.out.println("Successfully executed all " + testData.size() + " test cases from the Excel sheet.");
     }
-
-
-    // --- Generic steps for the Login UI scenario ---
 
     @When("I click on the {string} button")
     public void i_click_on_the_button(String buttonName) {
